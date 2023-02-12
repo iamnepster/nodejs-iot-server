@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const mqtt = require("mqtt");
 const { Sequelize, DataTypes } = require("sequelize");
+const log = require("fancylog");
 
 const app = express();
 const port = 8080;
@@ -15,21 +16,20 @@ const postgres = new Sequelize(
   "postgres://postgres:test123@localhost:31000/postgres"
 );
 
-const DhtLog = sequelize.define("dht_log", {
+const DhtLog = postgres.define("dht_log", {
   clientid: DataTypes.STRING,
-  temperature: DataTypes.NUMBER,
-  humidity: DataTypes.NUMBER,
+  temperature: DataTypes.DOUBLE,
+  humidity: DataTypes.DOUBLE,
   timestamp: DataTypes.DATE,
 });
 
 const mqttClient = mqtt.connect("mqtt://localhost:1883");
 
-mqttClient.on("connect", function () {
+mqttClient.on("connect", () => {
   mqttClient.subscribe("dht");
 });
 
-mqttClient.on("message", async function (_, message) {
-  console.log(message.toString());
+mqttClient.on("message", async (_, message) => {
   await DhtLog.create(JSON.parse(message));
 });
 
@@ -39,6 +39,7 @@ app.get("/api/dht", async (_, res) => {
 });
 
 app.post("/api/dht", async (req, res) => {
+  log.info(`Pushed entry to queue ${JSON.stringify(req.body)}`);
   mqttClient.publish("dht", JSON.stringify(req.body));
   res.status(202).send();
 });
