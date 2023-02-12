@@ -1,4 +1,4 @@
-= 🛠️ iot project for temperature and humidity tracking
+# 🛠️ iot project for temperature and humidity tracking
 
 backend: nodejs backend which subscribes to the mqtt message broker.
 
