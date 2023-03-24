@@ -1,5 +1,5 @@
-# 🛠️ iot project for temperature and humidity tracking
+# 🛠️ nodejs iot server for all my iot telemetry data
 
-backend: nodejs backend which subscribes to the mqtt message broker.
+backend: nodejs & sqlite backend.
 
-client: esp8266 using a dht22 to publish temperature and humidity data via mqtt.
+climate-client: esp8266 using a dht22 to publish temperature and humidity data via mqtt.
