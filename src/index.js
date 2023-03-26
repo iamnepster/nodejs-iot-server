@@ -1,66 +1,35 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const morgan = require("morgan");
 const helmet = require("helmet");
-const mqtt = require("mqtt");
-const { Sequelize, DataTypes } = require("sequelize");
 const log = require("fancylog");
+const database = require("./config/database.config");
+const climateRouter = require("./rest/climate.routes");
 const aedes = require("aedes")();
-const server = require("net").createServer(aedes.handle);
-const mqtt_port = 1883;
+const mqttBroker = require("net").createServer(aedes.handle);
+const { mqttPort } = require("./config/mqtt.config");
+const morganConfig = require("./config/morgan.config");
+require("./mqtt/climate.mqtt");
 
-server.listen(mqtt_port, function () {
-  log.info(`Mqtt server started and listening on port ${mqtt_port}`);
+const app = express();
+const port = 8080;
 
-  const mqttClient = mqtt.connect("mqtt://localhost:1883");
-  log.info("Mqtt client connection successful");
+app.use(morganConfig);
+app.use(helmet());
+app.use(bodyParser.json());
+app.use("/api/climate", climateRouter);
 
-  const app = express();
-  const port = 8080;
+mqttBroker.listen(mqttPort, async () => {
+  log.info(`Mqtt server started and listening on port ${mqttPort}`);
 
-  app.use(morgan("combined"));
-  app.use(helmet());
-  app.use(bodyParser.json());
+  try {
+    await database.authenticate();
+    await database.sync();
+    log.info("Database connection has been established successfully");
+  } catch (error) {
+    log.error("Couldn't establish database connection:", error);
+  }
 
-  const sequelize = new Sequelize("sqlite:./data/telemetry.db");
-
-  const DhtLog = sequelize.define("climate", {
-    clientName: DataTypes.STRING,
-    temperature: DataTypes.DOUBLE,
-    humidity: DataTypes.DOUBLE,
-    timestamp: DataTypes.DATE,
-  });
-
-  mqttClient.on("connect", () => {
-    mqttClient.subscribe("climate");
-  });
-
-  mqttClient.on("message", async (_, message) => {
-    await DhtLog.create(JSON.parse(message));
-    log.info(`Successfully saved entry to database ${message}`);
-  });
-
-  app.get("/api/climate", async (_, res) => {
-    const dhtLogs = await DhtLog.findAll();
-    res.send(dhtLogs);
-  });
-
-  app.post("/api/climate", async (req, res) => {
-    const payload = JSON.stringify(req.body);
-    mqttClient.publish("climate", payload);
-    log.info(`Successfully published entry to queue ${payload}`);
-    res.status(202).send();
-  });
-
-  app.listen(port, async () => {
+  app.listen(port, () => {
     log.info(`Nodejs server started and listening on port ${port}`);
-
-    try {
-      await sequelize.authenticate();
-      await sequelize.sync();
-      log.info("Database connection has been established successfully");
-    } catch (error) {
-      log.error("Couldn't establish database connection:", error);
-    }
   });
 });
