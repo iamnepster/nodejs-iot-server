@@ -1,7 +1,7 @@
 const express = require("express");
 const climateEntity = require("../database/climate.entity");
 const { mqttClient } = require("../config/mqtt.config");
-const log = require("fancylog");
+const logger = require("../config/logger.config");
 const router = express.Router();
 
 router.get("/", async (_, res) => {
@@ -12,7 +12,7 @@ router.get("/", async (_, res) => {
 router.post("/", async (req, res) => {
   const payload = JSON.stringify(req.body);
   mqttClient.publish("climate", payload);
-  log.info(`Successfully published entry to queue ${payload}`);
+  logger.mqtt(`Successfully published payload=${payload} to topic [climate]`);
   res.status(202).send();
 });
 

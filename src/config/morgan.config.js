@@ -1,6 +1,6 @@
 const morgan = require("morgan");
-const log = require("fancylog");
+const logger = require("../config/logger.config");
 
 module.exports = morgan(":method :url status :status - :response-time ms", {
-  stream: { write: (message) => log.info(message.trim()) },
+  stream: { write: (message) => logger.http(message.trim()) },
 });

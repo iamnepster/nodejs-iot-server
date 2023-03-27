@@ -8,6 +8,7 @@ const aedes = require("aedes")();
 const mqttBroker = require("net").createServer(aedes.handle);
 const { mqttPort } = require("./config/mqtt.config");
 const morganConfig = require("./config/morgan.config");
+const logger = require("./config/logger.config");
 require("./mqtt/climate.mqtt");
 
 const app = express();
@@ -19,17 +20,17 @@ app.use(bodyParser.json());
 app.use("/api/climate", climateRouter);
 
 mqttBroker.listen(mqttPort, async () => {
-  log.info(`Mqtt server started and listening on port ${mqttPort}`);
+  logger.info(`Mqtt server started and listening on port ${mqttPort}`);
 
   try {
     await database.authenticate();
     await database.sync();
-    log.info("Database connection has been established successfully");
+    logger.info("Database connection has been established successfully");
   } catch (error) {
-    log.error("Couldn't establish database connection:", error);
+    logger.error("Couldn't establish database connection:", error);
   }
 
   app.listen(port, () => {
-    log.info(`Nodejs server started and listening on port ${port}`);
+    logger.info(`Nodejs server started and listening on port ${port}`);
   });
 });
