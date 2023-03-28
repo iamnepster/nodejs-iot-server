@@ -1,0 +1,107 @@
+[28.03.2023 16:46:52] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:46:52] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:46:52] [mqtt] 	Mqtt client successfully subscribed to topic - climate
+[28.03.2023 16:46:52] [mqtt] 	Mqtt client successfully subscribed to topic - energy
+[28.03.2023 16:46:52] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:46:52] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:46:52] [info] 	Database connection has been established successfully
+[28.03.2023 16:46:52] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:47:33] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:47:33] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:47:33] [mqtt] 	Mqtt client successfully subscribed to topic - climate
+[28.03.2023 16:47:33] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:47:33] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:47:33] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:47:33] [info] 	Database connection has been established successfully
+[28.03.2023 16:47:33] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:48:53] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:48:53] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:48:53] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:48:53] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:48:53] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:48:53] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:48:53] [info] 	Database connection has been established successfully
+[28.03.2023 16:48:53] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:48:58] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:48:58] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:48:58] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:48:58] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:48:58] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:48:58] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:48:58] [info] 	Database connection has been established successfully
+[28.03.2023 16:48:58] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:49:15] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:49:15] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:49:15] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:49:15] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:49:15] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:49:15] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:49:15] [info] 	Database connection has been established successfully
+[28.03.2023 16:49:15] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:49:28] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:49:28] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:49:28] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:49:28] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:49:28] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:49:28] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:49:28] [info] 	Database connection has been established successfully
+[28.03.2023 16:49:28] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:50:11] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:50:11] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:50:11] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:50:11] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:50:11] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:50:11] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:50:11] [info] 	Database connection has been established successfully
+[28.03.2023 16:50:11] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:51:25] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:51:25] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:51:25] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:51:25] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:51:25] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:51:25] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:51:25] [info] 	Database connection has been established successfully
+[28.03.2023 16:51:25] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 16:52:13] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 16:52:13] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 16:52:13] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 16:52:13] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 16:52:13] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 16:52:13] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 16:52:13] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='energies';
+[28.03.2023 16:52:13] [sql] 	Executing (default): CREATE TABLE IF NOT EXISTS `energies` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `clientName` VARCHAR(255), `watt` DOUBLE PRECISION, `timestamp` DATETIME, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);
+[28.03.2023 16:52:13] [sql] 	Executing (default): PRAGMA INDEX_LIST(`energies`)
+[28.03.2023 16:52:13] [info] 	Database connection has been established successfully
+[28.03.2023 16:52:13] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 17:01:48] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 17:01:48] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 17:02:14] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 17:02:14] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 17:02:14] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 17:02:14] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 17:02:14] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 17:02:14] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 17:02:14] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='energies';
+[28.03.2023 17:02:14] [sql] 	Executing (default): PRAGMA INDEX_LIST(`energies`)
+[28.03.2023 17:02:14] [info] 	Database connection has been established successfully
+[28.03.2023 17:02:14] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 17:04:06] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 17:04:06] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 17:04:06] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 17:04:06] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 17:04:06] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 17:04:06] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 17:04:06] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='energies';
+[28.03.2023 17:04:06] [sql] 	Executing (default): PRAGMA INDEX_LIST(`energies`)
+[28.03.2023 17:04:06] [info] 	Database connection has been established successfully
+[28.03.2023 17:04:06] [info] 	Nodejs server started and listening on port 8080
+[28.03.2023 17:04:34] [info] 	Mqtt server started and listening on port 1883
+[28.03.2023 17:04:34] [sql] 	Executing (default): SELECT 1+1 AS result
+[28.03.2023 17:04:34] [mqtt] 	Mqtt client successfully subscribed to topic='energy'
+[28.03.2023 17:04:34] [mqtt] 	Mqtt client successfully subscribed to topic='climate'
+[28.03.2023 17:04:34] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='climates';
+[28.03.2023 17:04:34] [sql] 	Executing (default): PRAGMA INDEX_LIST(`climates`)
+[28.03.2023 17:04:34] [sql] 	Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='energies';
+[28.03.2023 17:04:34] [sql] 	Executing (default): PRAGMA INDEX_LIST(`energies`)
+[28.03.2023 17:04:34] [info] 	Database connection has been established successfully
+[28.03.2023 17:04:34] [info] 	Nodejs server started and listening on port 8080
